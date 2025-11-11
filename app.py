@@ -26,8 +26,8 @@ if 'IMDB_Rating' not in df.columns:
 df = df.dropna()
 
 # Separate features and target
-X = df.drop('IMDB_Rating', axis=1)
-y = df['IMDB_Rating']
+X = df.drop('score', axis=1)
+y = df['score']
 
 # -----------------------------
 # ⚙️ Encode categorical variables
@@ -96,3 +96,4 @@ if st.button("⭐ Predict IMDb Rating"):
 
 st.markdown("---")
 st.caption("Developed by Rudrax • Powered by Streamlit & Random Forest Regressor")
+
